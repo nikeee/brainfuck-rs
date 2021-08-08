@@ -239,7 +239,7 @@ impl Program {
                     if memory[data_pointer] == 0 {
                         instruction_pointer += 1;
                     } else {
-                        instruction_pointer = loop_start_address as isize;
+                        instruction_pointer = (loop_start_address as isize) + 1;
                     }
                 }
                 Instruction::PutChar => {
